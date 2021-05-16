@@ -21,26 +21,38 @@ let adulto = document.querySelector('#adultos');
 let crianca = document.querySelector('#criancas');
 let hora = document.querySelector('#horas');
 
+let container = document.getElementsByClassName('container')[0];
 
 function trocarAnimation(){
-    let container = document.getElementsByClassName('container')[0];
-    container.style.animationName = 'aaa';
+    container.style.animationName = '';
 }
+
 function balance(){
-    let container = document.getElementsByClassName('container')[0];
     container.style.animationName = 'balance';
 }
 
 function verificar(){
     if(adulto.value == 0 && crianca.value == 0 || hora.value == 0) {
-        
+        if (adulto.value == 0 && crianca.value == 0) {
+            adulto.style.borderColor = "#ff0000";
+            crianca.style.borderColor = "#ff0000";
+        }
+        else if (adulto.value != 0) {
+            adulto.style.borderColor = "#705206";
+            crianca.style.borderColor = "#705206";
+        }
+        if (hora.value == 0) {
+            hora.style.borderColor = "#ff0000";
+        }
         balance();
         clearTimeout();
         setTimeout(trocarAnimation, 1000);
         console.log('balancando');
-        
     }
     else{
+        adulto.style.borderColor = "#705206";
+        crianca.style.borderColor = "#705206";
+        hora.style.borderColor = "#705206";
         animation();
     }
 }
@@ -59,7 +71,7 @@ function atualizar(){
     }
     document.getElementById('carne').innerHTML = (carne * adulto.value)+ (carne / 2 * crianca.value) + "g de carne";
     document.getElementById('cerveja').innerHTML = (cerveja * adulto.value) + "ml de cerveja";
-    document.getElementById('bebida').innerHTML = (bebida * adulto.value)+ (bebida / 2 * crianca.value) + "g de carne";
+    document.getElementById('bebida').innerHTML = (bebida * adulto.value)+ (bebida / 2 * crianca.value) + "ml de outras bebidas";
 }
 
 function width(){
