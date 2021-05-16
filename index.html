@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churrascômetro</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="cover">
+        <div class="container">
+            <div class="calc">
+                <h1>Churrascômetro</h1>
+                <form method="GET">
+                    <input min="0" oninput="atualizar()" id="adultos" type="number" placeholder="Adultos">
+                    <input min="0" oninput="atualizar()" id="criancas" type="number" placeholder="Crianças">
+                    <input min="0" oninput="atualizar()" id="horas" type="number" placeholder="Duração (h)">
+                    <div onclick="verificar()" class="btn-calcular">Calcular</div>
+                </form>
+            </div>
+            <div class="result">
+                <h2>Você precisará de...</h2>
+                <ul>
+                    <li id="carne">400g de carne</li>
+                    <li id="cerveja">1200 litros de cerveja</li>
+                    <li id="bebida">1200 litros de outras bebidas</li>
+                </ul>
+            </div>
+        </div>
+        <div></div>
+    </div>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

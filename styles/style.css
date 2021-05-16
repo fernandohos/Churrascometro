@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url('https://images.unsplash.com/photo-1558030089-02acba3c214e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=889&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cover {
+    width: 100vw;
+    height: 100vh;
+    background: #0000009f;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container {
+    width: 20%;
+    display: flex;
+    margin: auto;
+    border-radius: 20px;
+    border: 2px solid #6b500a;
+    padding: 50px 80px;
+    background-color: #00000039;
+    animation-duration: 1s;
+}
+
+.container h1 {
+    text-align: center;
+    color: #dddddd;
+    margin-bottom: 0.5em;
+}
+
+.container input {
+    display: block;
+    margin: auto;
+}
+
+.container input[type="number"] {
+    width: 150px;
+    margin-bottom: 1rem;
+    padding: 8px 8px 8px 16px;
+    border-radius: 50px;
+    border: 2px solid #705206;
+    background-color: #0000009f;
+/*     background-image: linear-gradient(45deg, #705206, #926f14); */
+    outline: none;
+    color: #fff5da;
+    
+}
+
+.container input[type="number"]::placeholder {
+    color: #fff5da;
+}
+
+.container input[type="number"]:focus {
+    box-shadow: 0px 0px 8px #83630b;
+}
+
+.container .btn-calcular {
+    text-align: center;
+    margin: auto;
+    width: 100px;
+    background-image: linear-gradient(45deg, #88640a, #ac8116);
+    padding: 8px;
+    border: none;
+    border-radius: 40px;
+    color: #fff5da;
+    display: block;
+    cursor: pointer;
+}
+
+.container .btn-calcular:hover {
+    background-image: linear-gradient(45deg, #a07814, #c79823);
+}
+
+.container .btn-calcular {
+    animation-duration: 1s;
+}
+
+.result {
+    margin-left: 50px;
+    display: none;
+    animation-duration: 1s;
+}
+
+.result h2  {
+    margin-top: 5px;
+    font-size: 1.4em;
+    color: #ddd;
+}
+
+.result ul {
+    margin-left: 20px;
+}
+
+.result ul li {
+    color: #ddd;
+    margin-top: 1.6em;
+    margin-bottom: 2.5em;
+}
+
+.position {
+    position: relative;
+}
+
+@keyframes calcular {
+    0% {
+        width: 20%;
+    }
+    100% {
+        width: 40%;
+    }
+}
+
+@keyframes balance {
+    0% {
+        transform: rotate(-5deg);
+    }
+    25% {
+        transform: rotate(3deg);
+    }
+    50% {
+        transform: rotate(-3deg);
+    }
+    75% {
+        ransform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(-0deg);
+    }
+}
+
+@keyframes btn-fade-out {
+    0%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes info-fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
